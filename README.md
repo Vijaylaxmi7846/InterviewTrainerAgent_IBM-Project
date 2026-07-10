@@ -268,4 +268,6 @@ MIT License — free to use, modify, and deploy.
 
 ---
 
+http://10.177.34.169:8081
+
 *Built with ❤️ using IBM Watsonx.ai Granite + FAISS RAG + Flask*

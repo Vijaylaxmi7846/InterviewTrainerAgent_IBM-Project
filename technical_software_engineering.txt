@@ -1,0 +1,140 @@
+TECHNICAL INTERVIEW QUESTIONS — SOFTWARE ENGINEERING
+======================================================
+
+DATA STRUCTURES AND ALGORITHMS
+
+Q: What is the difference between an Array and a Linked List?
+Answer: Arrays store elements in contiguous memory with O(1) random access but O(n) insertion/deletion. Linked Lists store elements as nodes with pointers, allowing O(1) insertion/deletion at head but O(n) access.
+Interviewer looks for: Understanding of time/space complexity trade-offs.
+
+Q: Explain Big O notation.
+Answer: Big O describes the upper bound of an algorithm's time or space complexity as input grows. Common complexities: O(1) constant, O(log n) logarithmic, O(n) linear, O(n log n) linearithmic, O(n²) quadratic.
+Tip: Always analyze best, average, and worst case.
+
+Q: What is a hash table and how does collision resolution work?
+Answer: A hash table maps keys to values using a hash function. Collisions are resolved via chaining (linked list at each bucket) or open addressing (linear probing, quadratic probing, double hashing).
+Average O(1) for get/set; O(n) worst case.
+
+Q: Explain DFS vs BFS.
+Answer: DFS (Depth First Search) explores as deep as possible before backtracking — uses stack/recursion — good for cycle detection, topological sort, pathfinding. BFS (Breadth First Search) explores level by level — uses queue — good for shortest path in unweighted graphs.
+
+OBJECT-ORIENTED PROGRAMMING
+
+Q: What are the four pillars of OOP?
+Answer:
+1. Encapsulation: Bundling data and methods; hiding internal state.
+2. Abstraction: Exposing only necessary details via interfaces/abstract classes.
+3. Inheritance: Subclass acquires properties of parent class.
+4. Polymorphism: One interface, multiple implementations (method overriding, overloading).
+
+Q: What is the difference between abstract class and interface?
+Answer: Abstract class can have implementation, constructors, and state. Interface defines a contract — no implementation (in traditional OOP). A class can implement multiple interfaces but extend only one abstract class.
+
+Q: Explain SOLID principles.
+Answer:
+S - Single Responsibility: One class, one reason to change.
+O - Open/Closed: Open for extension, closed for modification.
+L - Liskov Substitution: Subtypes must be substitutable for base types.
+I - Interface Segregation: Don't force clients to depend on unused methods.
+D - Dependency Inversion: Depend on abstractions, not concretions.
+
+SYSTEM DESIGN
+
+Q: How would you design a URL shortener like bit.ly?
+Answer Framework:
+1. Functional requirements: Shorten URL, redirect, analytics, expiry.
+2. Non-functional: High availability, low latency, scalability.
+3. Components: API gateway, application servers, database (SQL/NoSQL), cache (Redis).
+4. Encoding: Base62 (6 chars = 56 billion URLs). Hash MD5/SHA256 then take first 6 chars.
+5. Database schema: id, long_url, short_code, created_at, expiry, click_count.
+6. Caching: Cache most frequent short codes in Redis.
+
+Q: How would you design a chat application?
+Answer Framework:
+1. WebSockets for real-time communication.
+2. Message queue (Kafka/RabbitMQ) for reliability.
+3. Database: Cassandra for chat history (high write throughput).
+4. Presence service for online/offline status.
+5. Push notifications via APNs/FCM.
+
+Q: Explain CAP theorem.
+Answer: In a distributed system, you can only guarantee 2 of 3: Consistency (all nodes see same data), Availability (every request gets a response), Partition tolerance (system works despite network splits). Since network partitions happen, you choose CP or AP systems.
+
+DATABASE CONCEPTS
+
+Q: When to use SQL vs NoSQL?
+SQL: Structured data, ACID transactions, complex joins — e.g., banking, e-commerce.
+NoSQL: Unstructured/semi-structured, high scalability, flexible schema — e.g., social media, IoT.
+
+Q: What is database indexing?
+Answer: Index is a data structure (B-tree, hash) that speeds up query retrieval at the cost of storage and write speed. Clustered index determines physical order of rows. Non-clustered index is a separate structure with pointers.
+
+Q: Explain SQL JOINs.
+INNER JOIN: Returns matching rows from both tables.
+LEFT JOIN: All rows from left, matched rows from right (NULL if no match).
+RIGHT JOIN: All rows from right, matched rows from left.
+FULL OUTER JOIN: All rows from both tables.
+CROSS JOIN: Cartesian product.
+
+Q: What is normalization?
+Answer: Process of organizing database to reduce redundancy.
+1NF: Atomic values, no repeating groups.
+2NF: 1NF + no partial dependency.
+3NF: 2NF + no transitive dependency.
+BCNF: 3NF + every determinant is a candidate key.
+
+WEB DEVELOPMENT
+
+Q: Explain the HTTP request-response cycle.
+Answer: Client sends HTTP request (method, URL, headers, body) → DNS resolves hostname → TCP/TLS handshake → Server processes request → Returns HTTP response (status code, headers, body) → Client renders response.
+
+Q: What are RESTful API principles?
+Answer: Stateless, client-server, cacheable, uniform interface (resource-based URLs), layered system, code on demand (optional).
+HTTP verbs: GET (read), POST (create), PUT (update/replace), PATCH (partial update), DELETE (remove).
+
+Q: Explain authentication vs authorization.
+Authentication: Verifying identity (who you are) — JWT, OAuth, session cookies.
+Authorization: Verifying permissions (what you can do) — RBAC, ACL.
+
+DEVOPS AND CLOUD
+
+Q: What is Docker and why use it?
+Answer: Docker packages applications and dependencies into containers — lightweight, portable, consistent across environments. Solves "works on my machine" problem.
+Key concepts: Image, Container, Dockerfile, Registry, Docker Compose.
+
+Q: Explain CI/CD pipeline.
+Answer: Continuous Integration: Automatically build and test code on every commit. Continuous Delivery: Automated deployment to staging. Continuous Deployment: Automated deployment to production.
+Tools: Jenkins, GitHub Actions, GitLab CI, CircleCI.
+
+Q: What is Kubernetes?
+Answer: Container orchestration platform. Manages deployment, scaling, load balancing, and self-healing of containerized applications.
+Key objects: Pod, Service, Deployment, ConfigMap, Secret, Ingress, Namespace.
+
+PYTHON SPECIFIC
+
+Q: What is the difference between list and tuple?
+List: Mutable, dynamic size, slightly slower. Tuple: Immutable, fixed size, faster, hashable (can be dict key).
+
+Q: Explain Python decorators.
+Answer: A decorator is a function that takes another function and extends its behavior without modifying it. Used with @syntax. Common uses: logging, authentication, caching (functools.lru_cache), timing.
+
+Q: What is GIL in Python?
+Answer: Global Interpreter Lock — mutex that allows only one thread to execute Python bytecode at a time. Impacts CPU-bound multithreading but not I/O-bound tasks. Solution: Use multiprocessing or async/await for concurrency.
+
+Q: Difference between __init__ and __new__?
+__new__: Creates the instance (class method). __init__: Initializes the instance. __new__ is called first.
+
+MACHINE LEARNING / DATA SCIENCE
+
+Q: Explain overfitting and underfitting.
+Overfitting: Model learns training data too well, fails on new data. Fix: More data, regularization (L1/L2), dropout, cross-validation.
+Underfitting: Model too simple to capture patterns. Fix: More complex model, more features, less regularization.
+
+Q: What is the bias-variance tradeoff?
+Bias: Error from wrong assumptions (underfitting). Variance: Error from sensitivity to training data (overfitting). Goal: Find balance — low bias AND low variance.
+
+Q: Explain precision vs recall.
+Precision = TP / (TP + FP) — Of all predicted positives, how many are actually positive?
+Recall = TP / (TP + FN) — Of all actual positives, how many did we predict correctly?
+F1 Score = Harmonic mean of precision and recall.
+Use precision when false positives are costly (spam filter). Use recall when false negatives are costly (cancer detection).

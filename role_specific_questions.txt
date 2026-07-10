@@ -1,0 +1,120 @@
+ROLE-SPECIFIC INTERVIEW QUESTIONS
+===================================
+
+PRODUCT MANAGER ROLE
+
+Q: How do you prioritize features in a product roadmap?
+Frameworks: RICE (Reach, Impact, Confidence, Effort), MoSCoW (Must/Should/Could/Won't), Kano Model, Impact vs Effort matrix.
+Model Answer: "I use a combination of RICE scoring for quantitative prioritization and stakeholder interviews to understand strategic alignment. I ensure we balance quick wins with long-term investments."
+
+Q: How do you define success for a product feature?
+Answer: Define clear KPIs (activation rate, retention, NPS, revenue impact) before launch. Use OKRs to tie features to company objectives.
+
+Q: How do you work with engineering teams?
+Answer: I create detailed PRDs (Product Requirement Documents), hold regular sprint planning, daily standups, and ensure clear acceptance criteria. I act as the bridge between business and tech.
+
+Q: Walk me through a product you improved.
+STAR Framework: Identify the problem with data, hypothesize solution, design MVP, test with users, measure results, iterate.
+
+Q: How do you handle stakeholder disagreements?
+Answer: Listen to understand, use data to support decisions, find common ground, escalate only when necessary. Focus on shared goals.
+
+DATA ANALYST ROLE
+
+Q: How would you approach a drop in a key metric?
+Framework:
+1. Verify the data (is the drop real or a tracking issue?)
+2. Segment by time, geography, device, user type
+3. Check for external factors (seasonality, outages, campaigns)
+4. Form hypotheses, test them
+5. Root cause analysis, propose solution
+
+Q: Explain the difference between mean, median, and mode.
+Mean: Average (sensitive to outliers). Median: Middle value (robust to outliers). Mode: Most frequent value. Use median for skewed distributions.
+
+Q: What SQL query would you write to find the top 5 customers by revenue?
+Answer: SELECT customer_id, SUM(revenue) as total_revenue FROM orders GROUP BY customer_id ORDER BY total_revenue DESC LIMIT 5;
+
+Q: How do you handle missing data?
+Strategies: Drop rows (if small %), impute with mean/median/mode, use model-based imputation (KNN, regression), flag with indicator variable.
+
+Q: What is A/B testing and how do you design one?
+Answer: Controlled experiment comparing two versions. Steps: Define hypothesis, choose metric, calculate sample size (power analysis), randomize assignment, run for statistical significance, analyze with t-test/chi-square, make decision.
+
+MARKETING ROLE
+
+Q: How do you measure the success of a marketing campaign?
+Metrics: Impressions, CTR, CPL, CPA, CAC, ROAS, LTV:CAC ratio, NPS, brand sentiment.
+Framework: Set goals → choose metrics → track → analyze → optimize.
+
+Q: What is your experience with digital marketing channels?
+Channels: SEO, SEM/PPC, social media (organic/paid), email, content marketing, influencer, affiliate, programmatic display.
+
+Q: How do you create a buyer persona?
+Answer: Combine qualitative (interviews, surveys) and quantitative (analytics, CRM data) research. Include demographics, psychographics, pain points, goals, preferred channels, buying triggers.
+
+Q: Describe a successful campaign you ran.
+STAR: Set objective → designed creative → chose channels → executed → measured results with specific numbers (ROI, conversions, reach).
+
+FINANCE ROLE
+
+Q: Walk me through a DCF analysis.
+Answer:
+1. Project free cash flows (FCF) for 5-10 years
+2. Determine discount rate (WACC for firms, required return for equity)
+3. Calculate terminal value (Gordon Growth Model or Exit Multiple)
+4. Discount all cash flows to present value
+5. Sum to get enterprise value; subtract debt, add cash for equity value
+
+Q: What is the difference between EBITDA and net income?
+EBITDA: Earnings Before Interest, Taxes, Depreciation, Amortization — proxy for operating cash flow, ignores capital structure.
+Net Income: Bottom line after all expenses. EBITDA is used for valuation comparisons across companies.
+
+Q: Explain the three financial statements and how they link.
+Income Statement: Revenue, expenses, net income (period performance).
+Balance Sheet: Assets, liabilities, equity (snapshot in time). Net income flows to retained earnings.
+Cash Flow Statement: Operating, investing, financing activities. Net income reconciled to cash via indirect method.
+
+HUMAN RESOURCES ROLE
+
+Q: How do you handle an underperforming employee?
+Framework: PIPs (Performance Improvement Plans), regular 1:1s, clear KPIs, coaching, training. Document everything. Follow HR policy.
+
+Q: What strategies do you use for talent acquisition?
+Answer: Job analysis → sourcing (LinkedIn, job boards, referrals, campus) → screening → structured interviews → assessment centers → offer → onboarding.
+
+Q: How do you promote diversity and inclusion?
+Answer: Blind resume screening, diverse interview panels, inclusive job descriptions, ERGs (Employee Resource Groups), pay equity audits, unconscious bias training.
+
+SALES ROLE
+
+Q: How do you handle a customer objection?
+Framework: Listen → Acknowledge → Clarify → Respond → Confirm. Never argue. Turn objections into opportunities.
+
+Q: Walk me through your sales process.
+Standard: Prospecting → Qualification (BANT: Budget, Authority, Need, Timeline) → Discovery → Presentation → Objection handling → Closing → Follow-up.
+
+Q: How do you build a pipeline from scratch?
+Answer: ICP (Ideal Customer Profile) definition, multi-channel outreach (cold email, LinkedIn, phone), partner referrals, inbound marketing, events.
+
+FRESHER SPECIFIC TECHNICAL QUESTIONS
+
+Q: What projects have you worked on?
+Framework: Describe the problem, your tech stack, your specific role, challenges faced, and outcomes. Deploy to GitHub and have demos ready.
+
+Q: What programming languages do you know?
+Tip: Be honest. Rank by proficiency. Mention specific projects for each.
+
+Q: How do you approach learning a new technology?
+Framework: Mention structured learning (docs, courses), hands-on projects, community engagement, pair programming.
+
+SENIOR PROFESSIONAL SPECIFIC QUESTIONS
+
+Q: How do you mentor junior team members?
+Framework: Regular 1:1s, code reviews, pair programming, growth plans, psychological safety, recognizing achievements.
+
+Q: Describe your experience leading cross-functional teams.
+Answer: Stakeholder alignment, clear RACI, communication cadence, managing conflicts, celebrating wins.
+
+Q: How do you drive innovation in your team?
+Framework: Psychological safety, hackathons, 20% time, retrospectives, learning from failures.

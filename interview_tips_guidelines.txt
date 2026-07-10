@@ -1,0 +1,116 @@
+INTERVIEW TIPS AND GUIDELINES
+==============================
+
+BEFORE THE INTERVIEW
+
+Research Checklist:
+- Company mission, vision, values
+- Recent news, product launches, acquisitions
+- Competitors and market position
+- Team/department you are joining
+- Interviewer's LinkedIn profile (if known)
+- Glassdoor reviews and interview experiences
+- Job description: Highlight required vs preferred skills
+
+Preparation:
+- Practice your "Tell me about yourself" (under 2 minutes)
+- Prepare 5-7 STAR stories covering: leadership, conflict, failure, success, teamwork, pressure
+- Research salary range (Glassdoor, LinkedIn Salary, Levels.fyi for tech)
+- Prepare 5 thoughtful questions for interviewers
+- Mock interviews with friends or tools
+
+Logistics:
+- Confirm time zone and interview format (video/in-person)
+- Test camera, microphone, and internet (for virtual)
+- Dress appropriately — when in doubt, overdress
+- Arrive 10 minutes early (in-person) or 5 minutes early (virtual)
+- Bring multiple copies of resume (in-person)
+- Have a notebook and pen
+
+DURING THE INTERVIEW
+
+Do:
+- Make strong eye contact and smile genuinely
+- Listen carefully before answering — it's OK to pause and think
+- Use the STAR method for behavioral questions
+- Quantify achievements wherever possible (increased by X%, saved $Y)
+- Show enthusiasm for the role and company
+- Ask clarifying questions if unsure
+- Take notes
+- Match the interviewer's energy and communication style
+
+Don't:
+- Interrupt the interviewer
+- Bad-mouth previous employers
+- Lie or exaggerate
+- Give one-word answers
+- Ramble without structure — use frameworks
+- Check your phone
+- Appear desperate
+
+Communication Tips:
+- Speak clearly and at moderate pace
+- Use professional vocabulary
+- Bridge weak points: "While I haven't done X directly, I have experience with Y which is very similar because..."
+- Show coachability: "That's a great point, I would also consider..."
+
+AFTER THE INTERVIEW
+
+- Send a personalized thank-you email within 24 hours
+- Reference specific topics discussed in the interview
+- Reiterate your interest and fit
+- Follow up if you don't hear back within the timeline given
+
+If you get rejected:
+- Ask for feedback (many companies will share)
+- Review and improve weak areas
+- Keep a pipeline of 5-10 active applications
+
+VIRTUAL INTERVIEW SPECIFIC TIPS
+
+Technical Setup:
+- Professional background (plain wall or virtual background)
+- Good lighting — light source should be in front of you
+- Camera at eye level
+- Headphones to avoid echo
+- Have a backup (phone hotspot, phone number to call)
+
+Virtual Body Language:
+- Look at the camera, not the screen
+- Sit up straight, lean slightly forward
+- Nod to show engagement
+- Minimize distractions — phone on silent, "Do Not Disturb" on
+
+SALARY NEGOTIATION TIPS
+
+- Never be the first to give a number if possible
+- Use the range strategy: give a range where your target is the lower end
+- Back up your number with market data
+- Consider total compensation: base + bonus + equity + benefits + PTO
+- It's OK to ask for time to consider an offer (24-48 hours)
+- Get the offer in writing
+
+COMMON MISTAKES TO AVOID
+
+1. Not preparing specific examples (generic answers)
+2. Talking too long or too short
+3. Not researching the company
+4. Focusing only on technical skills, ignoring soft skills
+5. Not asking any questions
+6. Appearing nervous without managing it (practice helps)
+7. Forgetting to follow up
+
+INTERVIEW SCORING RUBRIC (What interviewers assess)
+
+Communication: Clarity, structure, conciseness, active listening
+Technical Competence: Depth, accuracy, problem-solving approach
+Cultural Fit: Alignment with values, enthusiasm, team player
+Leadership/Initiative: Examples of going beyond the job description
+Growth Mindset: Curiosity, willingness to learn, handling feedback
+
+SCORING GUIDE (1-5 scale used by many companies):
+5 = Exceptional — would hire immediately
+4 = Strong — clear yes
+3 = Adequate — meets bar
+2 = Weak — below bar
+1 = Poor — do not hire

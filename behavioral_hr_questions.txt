@@ -1,0 +1,117 @@
+BEHAVIORAL AND HR INTERVIEW QUESTIONS — KNOWLEDGE BASE
+=======================================================
+
+STAR METHOD FRAMEWORK
+---------------------
+STAR stands for: Situation, Task, Action, Result.
+Use this framework to structure behavioral answers:
+- Situation: Describe the context or background
+- Task: Explain your responsibility or role
+- Action: Detail the specific steps YOU took
+- Result: Quantify the outcome or impact
+
+COMMON BEHAVIORAL QUESTIONS AND FRAMEWORKS
+
+Q: Tell me about yourself.
+Framework: Present-Past-Future formula.
+- Present: Current role and key responsibilities
+- Past: Relevant experience and key achievements
+- Future: Why this role excites you and your goals
+Tip: Keep it under 2 minutes. Tailor to the job description.
+
+Q: What are your greatest strengths?
+Framework: Identify 2-3 strengths relevant to the role. Back each with a concrete example.
+Tip: Align strengths with the job requirements. Avoid generic answers like "hardworking."
+
+Q: What is your greatest weakness?
+Framework: Name a real (non-critical) weakness, explain steps you are taking to improve, show progress.
+Tip: Never say "I work too hard." Pick something genuine and demonstrate self-awareness.
+
+Q: Describe a time you faced a major challenge at work.
+STAR Example:
+- Situation: Project was 3 weeks behind schedule due to team member illness.
+- Task: I was the lead developer responsible for delivery.
+- Action: Reorganized sprint backlog, brought in contractor, worked overtime strategically.
+- Result: Delivered on time. Client extended contract by 6 months.
+
+Q: Tell me about a time you worked in a team and faced conflict.
+Framework: Focus on resolution, not blame. Show empathy, communication skills, and outcome.
+Tip: Never speak negatively about teammates. Show how conflict improved the outcome.
+
+Q: Give an example of a time you showed leadership.
+Framework: You don't need a management title. Leadership can be influencing, mentoring, or driving initiative.
+Tip: Quantify the impact of your leadership.
+
+Q: Tell me about a time you failed.
+Framework: Own the failure, explain what you learned, show what you changed.
+Tip: Choose a genuine example. Interviewers respect honesty and growth mindset.
+
+Q: Where do you see yourself in 5 years?
+Framework: Align ambition with realistic growth in the company. Show loyalty + ambition.
+Tip: Research the company's growth paths before the interview.
+
+Q: Why do you want to work here?
+Framework: Research the company. Mention specific projects, culture, mission, or products.
+Tip: Never say "for the salary" or "because it's a good company." Be specific.
+
+Q: Why should we hire you?
+Framework: Match your top 3 skills to the top 3 job requirements. Add unique value.
+Tip: Summarize your pitch: "I bring X, Y, Z which directly maps to your needs A, B, C."
+
+Q: How do you handle stress and pressure?
+Framework: Give a real example. Mention techniques: prioritization, time blocking, communication.
+Tip: Show you stay calm and productive. Never say "I don't get stressed."
+
+Q: Describe your ideal work environment.
+Framework: Research company culture. Balance honesty with compatibility.
+Tip: Show flexibility. Mention collaboration, feedback, and learning.
+
+HR POLICY QUESTIONS
+
+Q: What are your salary expectations?
+Framework: Do market research. Give a range, not a fixed number. Express flexibility.
+Tip: Say "Based on my research and experience, I'm looking at $X to $Y, but I'm open to discussion."
+
+Q: Are you willing to relocate or travel?
+Framework: Be honest. If yes, express enthusiasm. If partial, give conditions.
+
+Q: When can you start?
+Framework: Give standard notice period. Offer to negotiate if needed.
+
+Q: Do you have any questions for us?
+ALWAYS ask questions. Suggested questions:
+- What does success look like in the first 90 days?
+- How would you describe the team culture?
+- What are the biggest challenges someone in this role faces?
+- What are the growth opportunities?
+- How is performance reviewed?
+
+FRESHER-SPECIFIC QUESTIONS
+
+Q: Why did you choose this field/major?
+Framework: Passion, curiosity, early experiences, or influential people.
+
+Q: Do you have any internship or project experience?
+Framework: Describe the project, your role, technologies used, and what you learned.
+
+Q: How have your studies prepared you for this role?
+Framework: Map coursework and projects directly to job responsibilities.
+
+Q: What extracurricular activities have you participated in?
+Framework: Leadership roles, competitions, clubs. Show soft skills and initiative.
+
+EXPERIENCED PROFESSIONAL QUESTIONS
+
+Q: Walk me through your career progression.
+Framework: Chronological but highlight jumps in responsibility and impact.
+Tip: Show a logical story of growth.
+
+Q: Why are you leaving your current job?
+Framework: Keep it positive. Focus on growth opportunities, not problems.
+Tip: Never badmouth current employer.
+
+Q: What is your management style?
+Framework: Situational leadership. Adapt to individual needs. Give examples.
+
+Q: How do you keep your skills up to date?
+Framework: Mention courses, certifications, communities, side projects, reading.

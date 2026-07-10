@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% block title %}Interview Practice — InterviewTrainer AI{% endblock %}
+
+{% block head_extra %}
+<style>
+  body { overflow: hidden; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="chat-page d-flex" id="chatPage">
+
+  <!-- ── Sidebar ─────────────────────────────────────────────────────────── -->
+  <aside class="chat-sidebar" id="chatSidebar">
+    <div class="sidebar-header">
+      <div class="agent-avatar-wrap">
+        <div class="agent-avatar">
+          <i class="bi bi-robot"></i>
+        </div>
+        <div class="agent-status-dot" id="agentStatusDot"></div>
+      </div>
+      <div>
+        <div class="agent-name">{{ agent_name }}</div>
+        <div class="agent-tagline" id="agentTagline">AI Interview Coach</div>
+      </div>
+    </div>
+
+    <!-- Session Info -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">SESSION</div>
+      <div class="session-info-grid">
+        <div class="si-item">
+          <div class="si-value" id="siRole">—</div>
+          <div class="si-label">Role</div>
+        </div>
+        <div class="si-item">
+          <div class="si-value" id="siExp">—</div>
+          <div class="si-label">Level</div>
+        </div>
+        <div class="si-item">
+          <div class="si-value" id="siQCount">0</div>
+          <div class="si-label">Questions</div>
+        </div>
+        <div class="si-item">
+          <div class="si-value" id="siScore">—</div>
+          <div class="si-label">Avg Score</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">PROGRESS</div>
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div class="progress-label"><span id="progressPct">0</span>% Complete</div>
+      </div>
+    </div>
+
+    <!-- Score Timeline -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">SCORE HISTORY</div>
+      <div class="score-timeline" id="scoreTimeline">
+        <div class="score-empty">No scores yet</div>
+      </div>
+    </div>
+
+    <!-- Quick Commands -->
+    <div class="sidebar-section">
+      <div class="sidebar-label">QUICK COMMANDS</div>
+      <div class="quick-cmds">
+        <button class="qcmd-btn" data-cmd="next">⏭ Next Question</button>
+        <button class="qcmd-btn" data-cmd="hint">💡 Get Hint</button>
+        <button class="qcmd-btn" data-cmd="summary">📊 Summary</button>
+        <button class="qcmd-btn" data-cmd="Tell me a tip for my current question">🎯 Interview Tip</button>
+      </div>
+    </div>
+
+    <!-- Timer -->
+    <div class="sidebar-section" id="timerSection" style="display:none">
+      <div class="sidebar-label">MOCK TIMER</div>
+      <div class="mock-timer" id="mockTimer">2:00</div>
+      <div class="d-flex gap-2 mt-2">
+        <button class="btn btn-sm btn-timer-start" id="timerStart">Start</button>
+        <button class="btn btn-sm btn-timer-reset" id="timerReset">Reset</button>
+      </div>
+    </div>
+
+    <!-- Session Controls -->
+    <div class="sidebar-footer">
+      <a href="/dashboard" class="sidebar-action-btn">
+        <i class="bi bi-bar-chart-line me-1"></i>Dashboard
+      </a>
+      <a href="/reset" class="sidebar-action-btn danger" onclick="return confirm('End this session and start over?')">
+        <i class="bi bi-arrow-counterclockwise me-1"></i>New Session
+      </a>
+    </div>
+  </aside>
+
+  <!-- ── Chat Main Area ───────────────────────────────────────────────── -->
+  <div class="chat-main d-flex flex-column flex-grow-1">
+
+    <!-- Chat Topbar -->
+    <div class="chat-topbar d-flex align-items-center justify-content-between px-4 py-2">
+      <div class="d-flex align-items-center gap-3">
+        <button class="btn btn-icon sidebar-toggle" id="sidebarToggle">
+          <i class="bi bi-layout-sidebar-reverse"></i>
+        </button>
+        <div class="topbar-title">
+          <span id="topbarRole">Interview Practice</span>
+          <span class="topbar-pill" id="ragPill">RAG</span>
+          <span class="topbar-pill demo-pill d-none" id="demoPill">DEMO MODE</span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-icon" id="mockModeToggle" title="Toggle Mock Interview Mode">
+          <i class="bi bi-stopwatch"></i>
+        </button>
+        <button class="btn btn-icon" id="clearChat" title="Clear chat">
+          <i class="bi bi-trash3"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages Container -->
+    <div class="chat-messages flex-grow-1" id="chatMessages">
+      <!-- Welcome state — replaced once chat starts -->
+      <div class="chat-welcome" id="chatWelcome">
+        <div class="welcome-icon">
+          <i class="bi bi-robot"></i>
+        </div>
+        <h3 class="welcome-title">Ready to Practice?</h3>
+        <p class="welcome-sub">
+          Click <strong>Start Session</strong> below to begin your personalized interview training.
+          The AI will ask for your experience level and target role, then generate tailored questions.
+        </p>
+        <button class="btn btn-start-session" id="startSessionBtn">
+          <i class="bi bi-play-circle-fill me-2"></i>Start Session
+        </button>
+
+        <div class="welcome-features mt-4">
+          <span class="wf-tag"><i class="bi bi-check2-circle me-1"></i>Technical Questions</span>
+          <span class="wf-tag"><i class="bi bi-check2-circle me-1"></i>STAR Behavioral</span>
+          <span class="wf-tag"><i class="bi bi-check2-circle me-1"></i>Instant Feedback</span>
+          <span class="wf-tag"><i class="bi bi-check2-circle me-1"></i>RAG-Enhanced</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div class="typing-indicator d-none" id="typingIndicator">
+      <div class="typing-avatar"><i class="bi bi-robot"></i></div>
+      <div class="typing-bubble">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <span class="typing-text">Interview Trainer AI is thinking...</span>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input-area px-3 pb-3 pt-2">
+      <div class="input-wrapper">
+        <button class="input-action-btn" id="uploadTrigger" title="Upload document to knowledge base">
+          <i class="bi bi-paperclip"></i>
+        </button>
+        <textarea
+          id="chatInput"
+          class="chat-textarea"
+          placeholder="Type your answer or message… (Shift+Enter for new line)"
+          rows="1"
+          disabled
+        ></textarea>
+        <button class="input-send-btn" id="sendBtn" disabled>
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </div>
+      <div class="input-hints">
+        <span>Press <kbd>Enter</kbd> to send &nbsp;·&nbsp; <kbd>Shift+Enter</kbd> for new line &nbsp;·&nbsp; Type <kbd>next</kbd> for next question &nbsp;·&nbsp; <kbd>hint</kbd> for a hint</span>
+      </div>
+
+      <!-- Hidden file input for upload -->
+      <input type="file" id="chatFileInput" accept=".txt,.pdf,.docx,.md" class="d-none" />
+    </div>
+  </div>
+
+</div>
+
+<!-- Upload Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index:9999">
+  <div id="uploadToast" class="toast align-items-center text-bg-success border-0" role="alert">
+    <div class="d-flex">
+      <div class="toast-body" id="uploadToastMsg">Document uploaded successfully!</div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

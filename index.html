@@ -1,0 +1,312 @@
+{% extends "base.html" %}
+{% block title %}InterviewTrainer Agent — AI-Powered Interview Prep{% endblock %}
+
+{% block content %}
+
+<!-- ── Hero Section ────────────────────────────────────────────────────── -->
+<section class="hero-section">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+
+  <div class="container py-5 position-relative">
+    <div class="row align-items-center min-vh-80">
+      <div class="col-lg-6 pe-lg-5">
+        <div class="hero-badge mb-4">
+          <span class="badge-dot"></span>
+          <span>Powered by IBM Watsonx.ai Granite</span>
+        </div>
+
+        <h1 class="hero-title">
+          Ace Your Next<br />
+          <span class="hero-highlight">Interview</span><br />
+          with AI Coaching
+        </h1>
+
+        <p class="hero-subtitle">
+          Personalized interview prep powered by IBM Granite models and RAG technology.
+          Practice with real questions, get instant feedback, track your progress.
+        </p>
+
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="/chat" class="btn btn-hero-primary">
+            <i class="bi bi-play-circle-fill me-2"></i>Start Interview Practice
+          </a>
+          <a href="#features" class="btn btn-hero-outline">
+            <i class="bi bi-info-circle me-2"></i>Learn More
+          </a>
+        </div>
+
+        <div class="hero-stats mt-5">
+          <div class="stat-item">
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Practice Questions</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Job Roles</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-num">RAG</div>
+            <div class="stat-label">Enhanced AI</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        <div class="hero-card-stack">
+          <!-- Preview Card -->
+          <div class="preview-chat-card">
+            <div class="preview-header">
+              <div class="preview-avatar">
+                <i class="bi bi-robot"></i>
+              </div>
+              <div>
+                <div class="preview-name">Interview Trainer AI</div>
+                <div class="preview-status"><span class="status-dot"></span>Online</div>
+              </div>
+            </div>
+            <div class="preview-messages">
+              <div class="preview-msg ai">
+                Hi! I'm Interview Trainer AI, your AI Interview Coach. Are you a <strong>fresher</strong> or
+                an <strong>experienced professional</strong>? Tell me your target role too!
+              </div>
+              <div class="preview-msg user">
+                Experienced, 3 years, Software Engineer
+              </div>
+              <div class="preview-msg ai">
+                Great! Let's start with a technical question for a mid-level SWE...
+                <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>
+              </div>
+            </div>
+            <div class="preview-input">
+              <span>Type your answer...</span>
+              <i class="bi bi-send-fill"></i>
+            </div>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="float-badge badge-rag">
+            <i class="bi bi-database-fill-check me-1"></i>RAG Active
+          </div>
+          <div class="float-badge badge-score">
+            <i class="bi bi-star-fill me-1"></i>Score: 4/5
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Features Section ────────────────────────────────────────────────── -->
+<section class="features-section py-5" id="features">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Everything You Need to <span class="text-accent">Succeed</span></h2>
+      <p class="section-subtitle">Built with IBM Watsonx.ai and enterprise-grade RAG technology</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Feature Cards -->
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon-wrap icon-blue">
+            <i class="bi bi-person-badge-fill"></i>
+          </div>
+          <h5 class="feature-title">Personalized Questions</h5>
+          <p class="feature-desc">
+            Questions tailored to your experience level (fresher or 1–15 years) and
+            target job role. Difficulty scales automatically.
+          </p>
+          <ul class="feature-tags">
+            <li>Fresher & Experienced</li>
+            <li>20+ Job Roles</li>
+            <li>Adaptive Difficulty</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon-wrap icon-purple">
+            <i class="bi bi-database-fill-check"></i>
+          </div>
+          <h5 class="feature-title">RAG-Enhanced Answers</h5>
+          <p class="feature-desc">
+            Retrieval-Augmented Generation fetches relevant context from a curated
+            knowledge base before generating responses — not just LLM guesswork.
+          </p>
+          <ul class="feature-tags">
+            <li>FAISS Vector Search</li>
+            <li>500+ KB Documents</li>
+            <li>Upload Custom Docs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon-wrap icon-green">
+            <i class="bi bi-chat-quote-fill"></i>
+          </div>
+          <h5 class="feature-title">Instant AI Feedback</h5>
+          <p class="feature-desc">
+            Submit your answer and get structured feedback: analysis, STAR check,
+            model answer, interviewer insights, and a score out of 5.
+          </p>
+          <ul class="feature-tags">
+            <li>STAR Method Checker</li>
+            <li>1–5 Scoring</li>
+            <li>Actionable Tips</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon-wrap icon-orange">
+            <i class="bi bi-bar-chart-steps"></i>
+          </div>
+          <h5 class="feature-title">Progress Dashboard</h5>
+          <p class="feature-desc">
+            Track your performance across sessions. See scores, question type breakdown,
+            strengths, and improvement areas over time.
+          </p>
+          <ul class="feature-tags">
+            <li>Score Trends</li>
+            <li>Question Analytics</li>
+            <li>Session Summaries</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon-wrap icon-teal">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </div>
+          <h5 class="feature-title">Mock Interview Mode</h5>
+          <p class="feature-desc">
+            Timed interview simulation with a 2-minute countdown per question.
+            Simulate real pressure to build confidence.
+          </p>
+          <ul class="feature-tags">
+            <li>2-min Timer</li>
+            <li>Full Session Mode</li>
+            <li>Rapid Fire Option</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon-wrap icon-pink">
+            <i class="bi bi-sliders2-vertical"></i>
+          </div>
+          <h5 class="feature-title">Fully Customizable</h5>
+          <p class="feature-desc">
+            Edit <code>agent_config.py</code> to change the AI's tone, difficulty,
+            question mix, focus areas, and model parameters without touching the core code.
+          </p>
+          <ul class="feature-tags">
+            <li>AGENT_INSTRUCTIONS</li>
+            <li>Tone & Difficulty</li>
+            <li>Focus Areas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── How It Works ────────────────────────────────────────────────────── -->
+<section class="how-section py-5">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <h2 class="section-title">How It <span class="text-accent">Works</span></h2>
+      <p class="section-subtitle">Three simple steps to interview confidence</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="step-card text-center">
+          <div class="step-num">01</div>
+          <h5 class="step-title">Share Your Profile</h5>
+          <p class="step-desc">Tell Interview Trainer AI if you're a fresher or experienced, and your target role or industry.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card text-center">
+          <div class="step-num">02</div>
+          <h5 class="step-title">Practice with AI</h5>
+          <p class="step-desc">Answer personalized technical and behavioral questions. Get instant, structured feedback every time.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card text-center">
+          <div class="step-num">03</div>
+          <h5 class="step-title">Track & Improve</h5>
+          <p class="step-desc">Review your session summary on the dashboard. Focus on weak areas and watch your scores rise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Upload KB Section ───────────────────────────────────────────────── -->
+<section class="upload-section py-5">
+  <div class="container py-4">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <h2 class="section-title">Expand the <span class="text-accent">Knowledge Base</span></h2>
+        <p class="section-subtitle mb-4">
+          Upload your own interview guides, role descriptions, company FAQs, or HR documents.
+          The RAG engine will automatically index and use them.
+        </p>
+        <ul class="kb-feature-list">
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Supports TXT, PDF, DOCX, MD</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Instantly indexed into FAISS vector store</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Used in all subsequent AI responses</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Persists for the current session</li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="upload-card">
+          <div class="upload-zone" id="uploadZone">
+            <div class="upload-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+            <p class="upload-text">Drag & drop files here or click to browse</p>
+            <p class="upload-hint">TXT, PDF, DOCX, MD — max 16MB</p>
+            <input type="file" id="fileInput" accept=".txt,.pdf,.docx,.md" class="d-none" />
+            <button class="btn btn-upload mt-2" onclick="document.getElementById('fileInput').click()">
+              <i class="bi bi-folder2-open me-2"></i>Browse File
+            </button>
+          </div>
+          <div id="uploadStatus" class="mt-3 d-none">
+            <div class="upload-progress">
+              <div class="progress-bar-fill" id="uploadBar"></div>
+            </div>
+            <div id="uploadMessage" class="upload-msg mt-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA Section ─────────────────────────────────────────────────────── -->
+<section class="cta-section py-5">
+  <div class="container py-3 text-center">
+    <h2 class="cta-title">Ready to Ace Your Interview?</h2>
+    <p class="cta-sub">Start a free practice session powered by IBM Granite AI — no login required.</p>
+    <a href="/chat" class="btn btn-hero-primary btn-lg mt-3">
+      <i class="bi bi-rocket-takeoff-fill me-2"></i>Launch Interview Practice
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+{% endblock %}
